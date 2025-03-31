@@ -5,103 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DayZ Console Servers</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .server-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .header-overlay {
+            background: linear-gradient(45deg, rgba(17, 24, 39, 0.9), rgba(55, 65, 81, 0.7));
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-white">
-    <header class="text-center py-10 relative">
-        <!-- Background image behind title and Discord button -->
-        <img src="https://i.imgur.com/nUeRSI7.png" alt="Logo" class="absolute inset-0 w-full h-full object-cover opacity-50 z-0">
-        <h1 class="text-5xl font-bold text-blue-400 relative z-10">Welcome to the Ultimate DayZ Console Experience</h1>
-        <p class="text-lg mt-4 relative z-10">Join our community and explore custom servers.</p>
-        <a href="https://discord.gg/aj3kqXeHby" class="mt-6 inline-block bg-blue-500 px-6 py-3 rounded-full hover:bg-blue-600 transition relative z-10">Join Our Discord</a>
+    <!-- Navigation -->
+    <nav class="bg-gray-800 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://i.imgur.com/nUeRSI7.png" alt="Logo" class="w-10 h-10 mr-2">
+                <span class="text-xl font-bold text-blue-400">DayZ Console</span>
+            </div>
+            <div class="space-x-6">
+                <a href="#servers" class="hover:text-blue-400 transition">Servers</a>
+                <a href="#discord" class="hover:text-blue-400 transition">Discord</a>
+                <a href="#rules" class="hover:text-blue-400 transition">Rules</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-20 relative overflow-hidden">
+        <div class="header-overlay absolute inset-0 z-0"></div>
+        <img src="https://i.imgur.com/nUeRSI7.png" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-20 z-0">
+        <div class="relative z-10 max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-bold text-blue-400 mb-6 drop-shadow-lg">DayZ Console Community</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">Experience enhanced gameplay with custom servers and active communities</p>
+            <a href="https://discord.gg/aj3kqXeHby" class="inline-block bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105">
+                Join Our Discord
+            </a>
+        </div>
     </header>
-
-    <section id="servers" class="py-16 px-8">
-        <h2 class="text-3xl text-center text-blue-400">Featured Servers</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+    <!-- Server 1 - The Savior:Rp Server -->
+    <section id="servers" class="py-16 px-6 container mx-auto">
+        <h2 class="text-4xl text-center text-blue-400 font-bold mb-12">Featured Servers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Server 1 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <div class="server-card bg-gray-800 p-6 rounded-xl shadow-2xl border border-gray-700">
                 <div class="flex items-center mb-4">
-                    <!-- Circle logo spot -->
-                    <img src="https://i.imgur.com/0SUP1i6.png" alt="Logo" class="w-12 h-12 rounded-full mr-4">
-                    <h3 class="text-2xl text-red-300">The Saviors:Rp</h3>
+                    <img src="https://i.imgur.com/0SUP1i6.png" alt="The Saviors Logo" class="w-14 h-14 rounded-full border-2 border-red-500">
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-red-400">The Saviors: RP</h3>
+                        <span class="text-gray-400 text-sm">Livonia • 24 slots</span>
+                    </div>
                 </div>
-                <p class="mt-2">Custom RolePlay Server, active admins, Discord Shop, 1.5x Boosted Loot, 2x Vehicles, In-Game Shops and more.</p>
-                <a href="https://discord.gg/6ec6MjBMFb" class="mt-4 inline-block bg-red-500 px-4 py-2 rounded hover:bg-blue-600">Join Now</a>
+                <ul class="space-y-2 text-gray-300 mb-4">
+                    <li>✔️ 1.5x Boosted Loot</li>
+                    <li>✔️ Active Admin Team</li>
+                    <li>✔️ In-Game Economy</li>
+                    <li>✔️ Custom Events</li>
+                    <li>✔️ Discord Trader</li>
+                </ul>
+                <a href="https://discord.gg/6ec6MjBMFb" class="inline-block w-full text-center bg-red-600 hover:bg-red-700 py-3 rounded-lg font-medium transition">
+                    Join Server
+                </a>
             </div>
 
-            <!-- Server 2 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <!-- Server 2 - Example PvP Server -->
+            <div class="server-card bg-gray-800 p-6 rounded-xl shadow-2xl border border-gray-700">
                 <div class="flex items-center mb-4">
-                    <!-- Circle logo spot -->
-                    <img src="https://i.imgur.com/YOUR_IMAGE.png" alt="Logo" class="w-12 h-12 rounded-full mr-4">
-                    <h3 class="text-2xl text-blue-300">Server Name 2</h3>
+                    <img src="https://www.vhv.rs/dpng/d/438-4386503_transparent-dayz-logo-png-dayz-logo-png-png.png" alt="PvP Legends Logo" class="w-14 h-14 rounded-full border-2 border-green-500">
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-green-400">PvP Legends</h3>
+                        <span class="text-gray-400 text-sm">Survival • 60 slots</span>
+                    </div>
                 </div>
-                <p class="mt-2">Custom features, active admins, and more.</p>
-                <a href="#" class="mt-4 inline-block bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">Join Now</a>
+                <ul class="space-y-2 text-gray-300 mb-4">
+                    <li>✔️ 1.6x Military Loot</li>
+                    <li>✔️ Weekly Tournaments</li>
+                    <li>✔️ Base Building+</li>
+                    <li>✔️ Kill Feed System</li>
+                </ul>
+                <a href="#" class="inline-block w-full text-center bg-green-600 hover:bg-green-700 py-3 rounded-lg font-medium transition">
+                    Join Server
+                </a>
+            </div>
+           
+            <!-- Server 3 - Example PvP Server -->
+            <div class="server-card bg-gray-800 p-6 rounded-xl shadow-2xl border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <img src="https://www.vhv.rs/dpng/d/438-4386503_transparent-dayz-logo-png-dayz-logo-png-png.png" alt="PvP Legends Logo" class="w-14 h-14 rounded-full border-2 border-green-500">
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-green-400">PvP Legends</h3>
+                        <span class="text-gray-400 text-sm">Cherno • 60 slots</span>
+                    </div>
+                </div>
+                <ul class="space-y-2 text-gray-300 mb-4">
+                    <li>✔️ 2x Military Loot</li>
+                    <li>✔️ Weekly Tournaments</li>
+                    <li>✔️ Base Building+</li>
+                    <li>✔️ Kill Feed System</li>
+                </ul>
+                <a href="#" class="inline-block w-full text-center bg-green-600 hover:bg-green-700 py-3 rounded-lg font-medium transition">
+                    Join Server
+                </a>
             </div>
 
-            <!-- Server 3 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+             <!-- Server 4 - Example PvP Server -->
+            <div class="server-card bg-gray-800 p-6 rounded-xl shadow-2xl border border-gray-700">
                 <div class="flex items-center mb-4">
-                    <!-- Circle logo spot -->
-                    <img src="https://i.imgur.com/YOUR_IMAGE.png" alt="Logo" class="w-12 h-12 rounded-full mr-4">
-                    <h3 class="text-2xl text-blue-300">Server Name 3</h3>
+                    <img src="https://www.vhv.rs/dpng/d/438-4386503_transparent-dayz-logo-png-dayz-logo-png-png.png" alt="PvP Legends Logo" class="w-14 h-14 rounded-full border-2 border-green-500">
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-green-400">PvP Legends</h3>
+                        <span class="text-gray-400 text-sm">Cherno • 60 slots</span>
+                    </div>
                 </div>
-                <p class="mt-2">Custom features, active admins, and more.</p>
-                <a href="#" class="mt-4 inline-block bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">Join Now</a>
+                <ul class="space-y-2 text-gray-300 mb-4">
+                    <li>✔️ 2x Military Loot</li>
+                    <li>✔️ Weekly Tournaments</li>
+                    <li>✔️ Base Building+</li>
+                    <li>✔️ Kill Feed System</li>
+                </ul>
+                <a href="#" class="inline-block w-full text-center bg-green-600 hover:bg-green-700 py-3 rounded-lg font-medium transition">
+                    Join Server
+                </a>
             </div>
-             <!-- Server 4 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <div class="flex items-center mb-4">
-                    <!-- Circle logo spot -->
-                    <img src="https://i.imgur.com/YOUR_IMAGE.png" alt="Logo" class="w-12 h-12 rounded-full mr-4">
-                    <h3 class="text-2xl text-blue-300">Server Name 4</h3>
-                </div>
-                <p class="mt-2">Custom features, active admins, and more.</p>
-                <a href="#" class="mt-4 inline-block bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">Join Now</a>
-            </div>
-              <!-- Server 5 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <div class="flex items-center mb-4">
-                    <!-- Circle logo spot -->
-                    <img src="https://i.imgur.com/YOUR_IMAGE.png" alt="Logo" class="w-12 h-12 rounded-full mr-4">
-                    <h3 class="text-2xl text-blue-300">Server Name 5</h3>
-                </div>
-                <p class="mt-2">Custom features, active admins, and more.</p>
-                <a href="#" class="mt-4 inline-block bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">Join Now</a>
-            </div>
-              <!-- Server 6 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <div class="flex items-center mb-4">
-                    <!-- Circle logo spot -->
-                    <img src="https://i.imgur.com/YOUR_IMAGE.png" alt="Logo" class="w-12 h-12 rounded-full mr-4">
-                    <h3 class="text-2xl text-blue-300">Server Name 6</h3>
-                </div>
-                <p class="mt-2">Custom features, active admins, and more.</p>
-                <a href="#" class="mt-4 inline-block bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">Join Now</a>
-            </div>
-              <!-- Server 7 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <div class="flex items-center mb-4">
-                    <!-- Circle logo spot -->
-                    <img src="https://i.imgur.com/YOUR_IMAGE.png" alt="Logo" class="w-12 h-12 rounded-full mr-4">
-                    <h3 class="text-2xl text-blue-300">Server Name 7</h3>
-                </div>
-                <p class="mt-2">Custom features, active admins, and more.</p>
-                <a href="#" class="mt-4 inline-block bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">Join Now</a>
-            </div>
-            <!-- Add more servers here as needed -->
+
+
+
+            <!-- Add more servers following the same structure -->
         </div>
     </section>
 
-    <section id="discord" class="text-center py-16">
-        <h2 class="text-3xl text-blue-400">Join Our Discord</h2>
-        <iframe src="https://discord.com/widget?id=1280508917423800421&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    <section id="discord" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl text-blue-400 font-bold mb-8">Join Our Community</h2>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+                <iframe src="https://discord.com/widget?id=1280508917423800421&theme=dark" 
+                        class="w-full md:w-96 h-96 rounded-xl shadow-lg"
+                        allowtransparency="true" 
+                        frameborder="0"></iframe>
+                <div class="text-left space-y-6">
+                    <div class="feature-card p-6 bg-gray-700 rounded-lg">
+                        <h3 class="text-2xl text-blue-400 mb-2">Real-time Updates</h3>
+                        <p class="text-gray-300">Get server status notifications, update alerts, and event announcements</p>
+                    </div>
+                    <div class="feature-card p-6 bg-gray-700 rounded-lg">
+                        <h3 class="text-2xl text-blue-400 mb-2">Player Support</h3>
+                        <p class="text-gray-300">24/7 staff support and community help channels</p>
+                    </div>
+                    <div class="feature-card p-6 bg-gray-700 rounded-lg">
+                        <h3 class="text-2xl text-blue-400 mb-2">Exclusive Perks</h3>
+                        <p class="text-gray-300">Discord roles, server whitelisting, and special rewards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer class="text-center py-6 bg-gray-800 mt-10">
-        <p>© 2025 DayZ Console Servers. All rights reserved.</p>
+    <footer class="bg-gray-900 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-blue-400 transition">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-400 transition">Terms of Service</a>
+                <a href="#" class="hover:text-blue-400 transition">Support</a>
+            </div>
+            <p class="mt-4">&copy; 2024 DayZ Console Community. Not affiliated with Bohemia Interactive.</p>
+        </div>
     </footer>
-
 </body>
 </html>
